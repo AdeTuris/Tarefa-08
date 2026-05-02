@@ -1,0 +1,65 @@
+<div class="container">
+  <header class="header">
+    <h1>{{ title }}</h1>
+    <p class="subtitle">Projeto acadêmico de integração entre frontend e API</p>
+  </header>
+
+  <main class="main-content">
+    <!-- Área de Carregamento -->
+    <div *ngIf="loading" class="loading">
+      <div class="spinner"></div>
+      <p>Consultando os dados do sistema...</p>
+    </div>
+
+    <!-- Área de Erro -->
+    <div *ngIf="erro && !loading" class="error-box">
+      <h2>Erro de comunicação</h2>
+      <p>{{ mensagemErro }}</p>
+      <button (click)="recarregar()" class="btn-primary">Recarregar Consulta</button>
+    </div>
+
+    <!-- Área de Sucesso -->
+    <div *ngIf="!loading && !erro && datetimeData" class="datetime-box">
+      <div class="status-badge">
+        <span class="badge-success">Sistema operacional e conectado</span>
+      </div>
+
+      <div class="datetime-display">
+        <div class="data-section">
+          <label>Data atual</label>
+          <p class="data-value">{{ datetimeData.data }}</p>
+        </div>
+
+        <div class="hora-section">
+          <label>Hora atual</label>
+          <p class="hora-value">{{ datetimeData.hora }}</p>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <details>
+          <summary>Informações técnicas da resposta</summary>
+          <ul>
+            <li><strong>Timestamp de geração:</strong> {{ datetimeData.timestamp }}</li>
+            <li><strong>Formato ISO 8601:</strong> {{ datetimeData.iso }}</li>
+            <li><strong>Status da resposta:</strong> {{ datetimeData.status }}</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="actions">
+        <button (click)="recarregar()" class="btn-primary">
+          Atualizar consulta
+        </button>
+        <button (click)="copiarParaAreaTransferencia()" class="btn-secondary">
+          Copiar dados
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Aplicação desenvolvida com Angular e Express.js para fins acadêmicos</p>
+    <p>API pública disponível em: <code>api-datetime.onrender.com</code></p>
+  </footer>
+</div>

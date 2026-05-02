@@ -1,0 +1,17 @@
+{
+  "name": "api-datetime",
+  "version": "1.0.0",
+  "description": "API Express para consulta de data e hora",
+  "main": "api.js",
+  "scripts": {
+    "start": "node api.js",
+    "dev": "node api.js"
+  },
+  "keywords": ["express", "api", "datetime"],
+  "author": "Aluno",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
