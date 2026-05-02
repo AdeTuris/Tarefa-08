@@ -195,7 +195,7 @@ export const environment = {
 ```typescript
 export const environment = {
   production: true,
-  apiUrl: 'https://api-datetime.onrender.com/api/datetime'
+  apiUrl: 'https://api-datetime-apbn.onrender.com/api/datetime'
 };
 ```
 
@@ -268,7 +268,7 @@ git push -u origin main
 **URL Pública da API:**
 
 ```
-https://api-datetime.onrender.com/api/datetime
+https://api-datetime-apbn.onrender.com/api/datetime
 ```
 
 [INSIRA PRINT DO DEPLOY SUCESSO NO RENDER]
@@ -294,7 +294,7 @@ https://api-datetime.onrender.com/api/datetime
 **URL Pública do Frontend:**
 
 ```
-https://seu-projeto.vercel.app
+https://tarefa-08-eosin.vercel.app
 ```
 
 [INSIRA PRINT DA APLICAÇÃO RODANDO NA VERCEL]
@@ -389,8 +389,8 @@ Professor: Prof. Deivison Takatu
 | Recurso | Link |
 |---|---|
 | Repositório GitHub | [https://github.com/AdeTuris/Tarefa-08](https://github.com/AdeTuris/Tarefa-08) |
-| API (Render) | https://api-datetime.onrender.com |
-| Frontend (Vercel) | https://seu-projeto.vercel.app |
+| API (Render) | https://api-datetime-apbn.onrender.com |
+| Frontend (Vercel) | https://tarefa-08-eosin.vercel.app |
 
 ## APÊNDICE B — Instruções de Reprodução
 
